@@ -59,7 +59,10 @@ inputForm.addEventListener("submit", function (e) {
   var totalHrs = date.getHours(); // Get time in 24 Hours Format
 
   function customBg(url) {
-    document.body.style.backgroundImage = "url(" + url + ")";
+    document.body.style.background =
+      "linear-gradient(#00000050, #00000050),url(" + url + ")";
+    document.body.style.backgroundColor = "#000000";
+    // document.body.style.backgroundImage = "url(" + url + ")";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
   }
