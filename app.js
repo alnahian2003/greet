@@ -71,11 +71,11 @@ inputForm.addEventListener("submit", function (e) {
   } else if (totalHrs >= 11 && totalHrs <= 14) {
     // বেলা ১১ টা হতে দুপুর ২ টা
     greetCon.innerHTML = sayGoodNoon;
-    customBg("'images/morning.jpg'");
+    customBg("'images/noon.jpg'");
   } else if (totalHrs >= 15 && totalHrs <= 17) {
     // দুপুর ৩ টা হতে বিকাল ৫ টা
     greetCon.innerHTML = sayGoodAfterNoon;
-    customBg("'images/morning.jpg'");
+    customBg("'images/afternoon.jpg'");
   } else if (totalHrs >= 18 && totalHrs <= 21) {
     // সন্ধ্যা ৬ টা হতে রাত ১০ টা
     greetCon.innerHTML = sayGoodEvening;
