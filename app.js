@@ -12,6 +12,9 @@ inputForm.addEventListener("submit", function (e) {
   //   Get user name from the input value
   let userName = userInput.value;
 
+  // Store Name on LocalStorage
+  localStorage.setItem("user", userName);
+
   //  Hide the entire form on successfull submit
   formCon.style.display = "none";
 
@@ -20,19 +23,13 @@ inputForm.addEventListener("submit", function (e) {
   function currTime() {
     var date = new Date(); //Initialize The Date
     var hrs = date.getHours();
-    hrs % 12;
+    hrs = hrs % 12;
     hrs = hrs ? hrs : 12; //Format hours in 12
     var mnts = date.getMinutes();
-
     if (mnts < 10) {
       mnts = "0" + mnts; //add 0 before singular second number
     }
-
-    if (hrs < 10) {
-      hrs = "0" + hrs; //add 0 before singular second number
-    }
-
-    timeCon.innerHTML = hrs + ":" + mnts;
+    timeCon.innerHTML = hrs + "<span class='blink'>:</span>" + mnts;
   }
 
   setInterval(() => {
